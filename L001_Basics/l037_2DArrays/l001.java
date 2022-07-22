@@ -23,6 +23,14 @@ public class l001 {
         int n = matrix.length, m = matrix[0].length;
         if (n != m)
             return false;
+        for(int row = 0; row<n; row++){
+            for(int col = 0; col<n; col++){
+                if(matrix[row][col]!=matrix[col][row]){
+                    return false;
+                }
+            }
+            return true;
+        }
 
         
 
@@ -33,8 +41,9 @@ public class l001 {
     public static void main(String[] args){
         int[][] arr = {{1,0,0},
                        {0,1,0},
-                       {0,0,2}
+                       {0,0,1}
                     };
         System.out.println(identityMatrix(arr));
+        System.out.println(matrixSymmetric(arr));
     }
 }
