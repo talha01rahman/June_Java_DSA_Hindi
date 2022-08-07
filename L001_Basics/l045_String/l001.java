@@ -50,6 +50,33 @@ public class l001 {
 
     public static String reverseStatement_02(String str) {
         String[] arr = str.split(" ");
+        reverseStringsArray(arr);
 
+        int n = arr.length;
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < n; i++) {
+            String nStr = reverseString(arr[i]);
+
+            sb.append(nStr);
+            if (i != n - 1)
+                sb.append(" ");
+        }
+
+        return sb.toString();
     }
+
+    public static void freqArray(String str) {
+        int[] fArr = new int[128 + 1];
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            fArr[ch] = fArr[ch] + 1; // ch -> int (ASCII)
+        }
+
+        for (int i = 'A'; i <= 'Z'; i++) {
+            System.out.println((char) i + " -> " + fArr[i]);
+        }
+    }
+
 }
