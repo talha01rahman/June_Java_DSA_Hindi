@@ -37,13 +37,13 @@ public class l001 {
     }
 
     public static void print2D(int[][] arr) {
-        // int n = arr.length, m = arr[0].length;
-        // for (int i = 0; i < n; i++) {
-        // for (int j = 0; j < m; j++) {
-        // System.out.print(arr[i][j] + " ");
-        // }
-        // System.out.println();
-        // }
+        int n = arr.length, m = arr[0].length;
+        for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+        System.out.print(arr[i][j] + " ");
+        }
+        System.out.println();
+        }
 
         for (int[] ar : arr) {
             print1D(ar);
